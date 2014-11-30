@@ -7,38 +7,43 @@
   </url>
   <url>
     <loc>http://sunilkumarc.in/about/</loc>
-    <lastmod>2014-11-30T23:25:52+05:30</lastmod>
+    <lastmod>2014-12-01T00:16:47+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://sunilkumarc.in/blog/archives/</loc>
-    <lastmod>2014-11-30T23:25:52+05:30</lastmod>
+    <lastmod>2014-12-01T00:16:47+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://sunilkumarc.in/blog/quizup-bug/</loc>
-    <lastmod>2014-11-30T23:25:52+05:30</lastmod>
+    <lastmod>2014-12-01T00:16:47+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://sunilkumarc.in/blog/</loc>
-    <lastmod>2014-11-30T23:25:52+05:30</lastmod>
+    <lastmod>2014-12-01T00:16:47+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://sunilkumarc.in/projects/</loc>
-    <lastmod>2014-11-30T23:25:52+05:30</lastmod>
+    <lastmod>2014-12-01T00:16:47+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://sunilkumarc.in/</loc>
-    <lastmod>2014-11-30T23:25:52+05:30</lastmod>
+    <lastmod>2014-12-01T00:16:47+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://sunilkumarc.in/stylesheets/demo.html</loc>
+    <lastmod>2014-11-30T23:52:34+05:30</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
