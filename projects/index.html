@@ -2,90 +2,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sunil Kumar C</title>
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/javascripts/jquery.min.js"></script>
-    <script src="/javascripts/jquery.scrolly.min.js"></script>
-    <script src="/javascripts/jquery.scrollzer.min.js"></script>
-    <script src="/javascripts/skel.min.js"></script>
-    <script src="/javascripts/skel-layers.min.js"></script>
-    <script src="/javascripts/init.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Perspective Page View Navigation</title>
+    <meta name="description" content="Perspective Page View Navigation: Transforms the page in 3D to reveal a menu" />
+    <meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
+    <meta name="author" content="Codrops" />
 
-    
-      <link rel="stylesheet" href="/stylesheets/skel.css" />
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-      <link rel="stylesheet" href="/stylesheets/style-wide.css" />
-      
 
-    <script type="text/javascript">    
-    </script>
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" type="text/css" href="/stylesheets/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/component.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/general_foundicons.css" />
+
+    <!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+    <script src="/javascripts/modernizr.custom.25376.js"></script>
   </head>
 
 <body>
 
-	<!-- Header -->
-			<div id="header" class="skel-layers-fixed">
-
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="/images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Sunil Kumar</h1>
-							<p>a Learner</p>
+	<div id="perspective" class="perspective effect-rotateleft">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					
+					<header class="codrops-header">
+						<h1>Sunil Kumar C<span>Developer Associate, SAP Labs India Pvt, Ltd.</span></h1>	
+						<hr/>
+						<div class="row">
+							<div class="column">
+								<p><button id="showMenu" class="current-demo">Menu</button></p>
+							</div>
+							<div class="column">
+								<a href="#" class="current-demo" style="display:none"></a>
+							</div>
 						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							
-							<ul>
-								<li><a href="/" id="home"><span class="icon fa-home">Home</span></a></li>
-								<li><a href="/blog" id="blog"><span class="icon fa-th">Blog</span></a></li>
-								<li><a href="/projects" id="projects"><span class="icon fa-cube">Projects</span></a></li>
-								<li><a href="/about" id="about"><span class="icon fa-user">About</span></a></li>
-							</ul>
-						</nav>
-						
-				</div>
-				
-				<div class="bottom">
-
-						<ul class="icons">
-							<li><a href="https://twitter.com/sunilkumar682" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.facebook.com/sunil.kumar.682" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://github.com/sunilkumarc/" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://in.linkedin.com/in/sunilkumarc/" class="icon fa-linkedin"><span class="label">Dribbble</span></a></li>
-							<li><a href="https://plus.google.com/+SunilKumarc682/posts" class="icon fa-google-plus"><span class="label">Email</span></a></li>
-						</ul>
-				
-				</div>
-			
-			</div>
-			<script>
-	var t = document.getElementById("projects");
-	t.className = t.className + " active";
-</script>
-
- <div id="main">
-	<section id="about" class="three">
-		<div class="container">
-
-			<header>
-				<h2>Projects will be uploaded soon!</h2>
-			</header>
-		</div>
-	</section>
-</div>
-			<div id="footer">
-	<ul class="copyright">
-		<li>Copyright &copy; 2014 Sunil Kumar C</li></li>
-	</ul>	
+					</header>
+					<div class="row">
+	<div class="left small-12 large-12">
+		<h2 class="text-center">Projects will be uploaded soon!</h2>
+	</div>
 </div>
 
+
+				</div><!-- wrapper -->
+			</div><!-- /container -->
+
+			<nav class="outer-nav right vertical">
+				<a href="/" class="icon-home">Home</a>
+				<a href="/blog/" class="icon-news">blog</a>
+				<a href="/projects/" class="icon-upload">Projects</a>
+			</nav>
+		</div><!-- /perspective -->
+
+		<script src="/javascripts/classie.js"></script>
+		<script src="/javascripts/menu.js"></script>
 </body>
 </html>
