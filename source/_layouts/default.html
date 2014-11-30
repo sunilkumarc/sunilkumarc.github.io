@@ -2,45 +2,35 @@
 {% include head.html %}
 <body>
 
-	<!-- Header -->
-			<div id="header" class="skel-layers-fixed">
-
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="{{ root_url }}/images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Sunil Kumar</h1>
-							<p>a Learner</p>
+	<div id="perspective" class="perspective effect-rotateleft">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					
+					<header class="codrops-header">
+						<h1>Sunil Kumar C<span>Developer Associate, SAP Labs India Pvt, Ltd.</span></h1>	
+						<hr/>
+						<div class="row">
+							<div class="column">
+								<p><button id="showMenu" class="current-demo">Menu</button></p>
+							</div>
+							<div class="column">
+								<a href="#" class="current-demo" style="display:none"></a>
+							</div>
 						</div>
+					</header>
+					{{ content | expand_urls: root_url }}
 
-					<!-- Nav -->
-						<nav id="nav">
-							
-							<ul>
-								<li><a href="/" id="home"><span class="icon fa-home">Home</span></a></li>
-								<li><a href="/blog" id="blog"><span class="icon fa-th">Blog</span></a></li>
-								<li><a href="/projects" id="projects"><span class="icon fa-cube">Projects</span></a></li>
-								<li><a href="/about" id="about"><span class="icon fa-user">About</span></a></li>
-							</ul>
-						</nav>
-						
-				</div>
-				
-				<div class="bottom">
+				</div><!-- wrapper -->
+			</div><!-- /container -->
 
-						<ul class="icons">
-							<li><a href="https://twitter.com/sunilkumar682" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.facebook.com/sunil.kumar.682" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://github.com/sunilkumarc/" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://in.linkedin.com/in/sunilkumarc/" class="icon fa-linkedin"><span class="label">Dribbble</span></a></li>
-							<li><a href="https://plus.google.com/+SunilKumarc682/posts" class="icon fa-google-plus"><span class="label">Email</span></a></li>
-						</ul>
-				
-				</div>
-			
-			</div>
-			{{ content | expand_urls: root_url }}
-			{% include footer.html %}
+			<nav class="outer-nav right vertical">
+				<a href="{{ root_url }}/" class="icon-home">Home</a>
+				<a href="{{ root_url }}/blog/" class="icon-news">blog</a>
+				<a href="{{ root_url }}/projects/" class="icon-upload">Projects</a>
+			</nav>
+		</div><!-- /perspective -->
+
+		<script src="{{ root_url }}/javascripts/classie.js"></script>
+		<script src="{{ root_url }}/javascripts/menu.js"></script>
 </body>
 </html>
