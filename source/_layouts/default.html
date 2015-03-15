@@ -7,13 +7,23 @@
     <core-toolbar id="navheader">
       <span>Menu</span>
     </core-toolbar>
-      <p><img class="avatar" src="{{ root_url }}/images/avatar.jpg"></img></p>
-    <core-menu valueattr="hash" selected="{{route}}">
+    
+    <p><img class="avatar" src="{{ root_url }}/images/avatar.jpg"></img></p>
+    
+    <core-menu>
       <core-item label="Home" icon="home"><a href="{{ root_url }}/"></a></core-item>
       <core-item label="Blog" icon="apps"><a href="{{ root_url }}/blog/"></a></core-item>
       <core-item label="Projects" icon="extension"><a href="{{ root_url }}/projects/"></a></core-item>
     </core-menu>
     
+    <div id="social">
+      <a href="https://github.com/sunilkumarc/"><core-icon icon="social:post-github"></core-icon></a>
+      <a href="http://in.linkedin.com/in/sunilkumarc"><core-icon icon="social:post-linkedin"></core-icon></a>
+      <a href="https://plus.google.com/+SunilKumarc682"><core-icon icon="social:post-gplus"></core-icon></a>
+      <a href="https://twitter.com/sunilkumar682"><core-icon icon="social:post-twitter"></core-icon></a>
+      <a href="https://www.facebook.com/sunil.kumar.682"><core-icon icon="social:post-facebook"></core-icon></a>
+    </div>
+
   </core-header-panel>
   <span tool>Sunil Kumar C</span>
   
