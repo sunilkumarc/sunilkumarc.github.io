@@ -30,6 +30,17 @@ p {
   background-color: #fff;
 }
 
+#social {
+  margin: 5px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  background-color: #fff; 
+}
+
+#social core-icon {
+  margin-left: 10px;
+}
+
 #nav {
   background-color: #f7f7f7;
 }
@@ -124,6 +135,10 @@ core-animated-pages > * {
 }
 
 #home {
-  background-color: #f7f7f7;
+  
   overflow: overflow;
+}
+
+#pages section {
+  background-color: #f7f7f7;
 }

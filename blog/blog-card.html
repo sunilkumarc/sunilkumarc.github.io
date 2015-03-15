@@ -1,0 +1,64 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-icon-button/core-icon-button.html">
+
+<polymer-element name="blog-card">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      background-color: white;
+      width: 20%;
+      height: 35%;
+      font-size: 1em;
+      font-weight: 300;
+    }
+
+    .card-header {
+      margin-bottom: 10px;
+      height: 100%;
+      /*border: 2px solid;*/
+    }
+
+    polyfill-next-selector { content: '.card-header h2'; }
+    .card-header ::content h2 {
+    	width: 90%;
+    	height: 30%;
+	    font-size: 1.3rem;
+	    font-weight: 300;
+	    border: 2px solid;
+    }
+
+    polyfill-next-selector { content: '.card-header img'; }
+    .card-header ::content img {
+      width: 100%;
+      height: 60%;
+    }
+
+    @media all and (max-width: 480px) {
+		:host {
+	      display: block;
+	      position: relative;
+	      background-color: white;
+	      width: 100%;
+	      height: 60%;
+	      font-size: 1em;
+	      font-weight: 300;
+	    }
+
+	    .card-header {
+	    	border-radius: 5px;
+	    }
+	}
+    </style>
+
+    <div class="card-header" layout vertical center>
+      <content select="img"></content>
+      <content select="h2"></content>
+    </div>
+    
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>
