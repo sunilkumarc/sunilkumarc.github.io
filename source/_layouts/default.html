@@ -1,36 +1,29 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head.html %}
-<body>
-
-	<div id="perspective" class="perspective effect-rotateleft">
-			<div class="container">
-				<div class="wrapper"><!-- wrapper needed for scroll -->
-					
-					<header class="codrops-header">
-						<h1>Sunil Kumar C<span>Developer Associate, SAP Labs India Pvt, Ltd.</span></h1>	
-						<hr/>
-						<div class="row">
-							<div class="column">
-								<p><button id="showMenu" class="current-demo">Menu</button></p>
-							</div>
-							<div class="column">
-								<a href="#" class="current-demo" style="display:none"></a>
-							</div>
-						</div>
-					</header>
-					{{ content | expand_urls: root_url }}
-
-				</div><!-- wrapper -->
-			</div><!-- /container -->
-
-			<nav class="outer-nav right vertical">
-				<a href="{{ root_url }}/" class="icon-home">Home</a>
-				<a href="{{ root_url }}/blog/" class="icon-news">blog</a>
-				<a href="{{ root_url }}/projects/" class="icon-upload">Projects</a>
-			</nav>
-		</div><!-- /perspective -->
-
-		<script src="{{ root_url }}/javascripts/classie.js"></script>
-		<script src="{{ root_url }}/javascripts/menu.js"></script>
+<body unresolved fullbreed>
+<template is="auto-binding" id="t">
+<core-scaffold>
+  <core-header-panel navigation flex id="nav">
+    <core-toolbar id="navheader">
+      <span>Menu</span>
+    </core-toolbar>
+      <p><img class="avatar" src="{{ root_url }}/images/avatar.jpg"></img></p>
+    <core-menu valueattr="hash" selected="{{route}}">
+      <core-item label="Home" icon="home"><a href="{{ root_url }}/"></a></core-item>
+      <core-item label="Blog" icon="apps"><a href="{{ root_url }}/blog/"></a></core-item>
+      <core-item label="Projects" icon="extension"><a href="{{ root_url }}/projects/"></a></core-item>
+    </core-menu>
+    
+  </core-header-panel>
+  <span tool>Sunil Kumar C</span>
+  
+  <div layout horizontal center-center fit>
+      <core-animated-pages id="pages">
+        {{ content | expand_urls: root_url }}      
+      </core-animated-pages>
+    </div>
+</core-scaffold>
+<template is="auto-binding" id="t">
+<script src="{{ root_url }}/javascripts/app.js"></script>
 </body>
 </html>
