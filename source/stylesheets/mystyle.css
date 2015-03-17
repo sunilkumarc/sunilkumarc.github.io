@@ -10,6 +10,11 @@ body {
   color: #fff;
 }
 
+core-header-panel {
+  font-weight: bold;
+  color: #424242;
+}
+
 core-scaffold::shadow core-toolbar {
   /*background-color: #433e90;*/
   background-color: #7986cb;
@@ -49,11 +54,15 @@ p {
 
 core-item {
   background-color: #fff;
-  border-bottom: 1px solid #f7f7f7;
+  border-top: 1px solid #f7f7f7;
 }
 
 core-item:hover {
   background-color: #f7f7f7;
+}
+
+core-menu {
+  margin-top: 0;
 }
 
 .avatar {
@@ -111,6 +120,7 @@ core-animated-pages > * {
   padding-left: 1%;
   line-height: 150%;
   font-size: 1.2em;
+  padding-top: 0;
 }
 
 @media all and (max-width: 480px) {
@@ -125,7 +135,7 @@ core-animated-pages > * {
 
     width: 100%;
     height: 200px;
-    margin: 0 0 1% 0;
+    margin: 0 0 5% 0;
   }
 
   #aboutme_desc {
@@ -134,7 +144,8 @@ core-animated-pages > * {
   }
 
   #aboutme_desc p {
-    margin: 2% 0 2% 0;
+    font-size: 1em;
+    margin: 0;
   }
 }
 
@@ -146,3 +157,33 @@ core-animated-pages > * {
 #pages section {
   background-color: #f7f7f7;
 }
+
+#hero1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: orange;
+  }
+  #hero2 {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 300px;
+    height: 300px;
+    background-color: orange;
+  }
+  #bottom1, #bottom2 {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 50px;
+  }
+  #bottom1 {
+    background-color: blue;
+  }
+  #bottom2 {
+    background-color: green;
+  }
