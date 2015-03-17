@@ -43,7 +43,8 @@ p {
 
 #nav {
   /*background-color: #f7f7f7;*/
-  background-color: #212121;
+  /*background-color: #212121;*/
+  background-color: #fff;
 }
 
 core-item {
@@ -70,8 +71,8 @@ core-item:hover {
 }
 
 core-animated-pages {
-  width: 98%;
-  height: 98%;
+  width: 100%;
+  height: 100%;
   -webkit-user-select: none;
   overflow: overflow;
   /*border: 2px solid;*/
@@ -86,8 +87,8 @@ core-animated-pages > * {
 #aboutme_pic {
   width: 50%;
   height: 50%;
-  margin-left: 25%;
   margin-bottom: 2%;
+  margin-left: 5%;
   padding-top: 1%;
   /*border: 2px solid black;*/
 }
@@ -100,14 +101,16 @@ core-animated-pages > * {
 }
 
 #aboutme_desc {
-  width: 60%;
-  margin-left: 20%;
+  width: 80%;
 }
 
 #aboutme_desc p {
   background-color: #f7f7f7;
-  background-color: #fff;
+  margin: 0;
+  margin: 0 0 0 5%;
+  padding-left: 1%;
   line-height: 150%;
+  font-size: 1.2em;
 }
 
 @media all and (max-width: 480px) {
