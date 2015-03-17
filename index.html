@@ -20,6 +20,7 @@
   <link rel="import" href="/bower_components/core-scaffold/core-scaffold.html">
   <link rel="import" href="/bower_components/core-icons/social-icons.html">
   <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="/bower_components/core-tooltip/core-tooltip.html">
 
   <link rel="stylesheet" href="/stylesheets/mystyle.css">
   <link rel="import" href="/blog/blog-card.html">
@@ -41,13 +42,12 @@
     </core-menu>
     
     <div id="social">
-      <a href="https://github.com/sunilkumarc/"><core-icon icon="social:post-github"></core-icon></a>
-      <a href="http://in.linkedin.com/in/sunilkumarc"><core-icon icon="social:post-linkedin"></core-icon></a>
-      <a href="https://plus.google.com/+SunilKumarc682"><core-icon icon="social:post-gplus"></core-icon></a>
-      <a href="https://twitter.com/sunilkumar682"><core-icon icon="social:post-twitter"></core-icon></a>
-      <a href="https://www.facebook.com/sunil.kumar.682"><core-icon icon="social:post-facebook"></core-icon></a>
+      <a href="https://github.com/sunilkumarc/"><core-tooltip label="Github"><core-icon icon="social:post-github"></core-icon></core-tooltip></a>
+      <a href="http://in.linkedin.com/in/sunilkumarc"><core-tooltip label="Linkedin"><core-icon icon="social:post-linkedin"></core-icon></core-tooltip></a>
+      <a href="https://plus.google.com/+SunilKumarc682"><core-tooltip label="GPlus"><core-icon icon="social:post-gplus"></core-icon></core-tooltip></a>
+      <a href="https://twitter.com/sunilkumar682"><core-tooltip label="Twitter"><core-icon icon="social:post-twitter"></core-icon></core-tooltip></a>
+      <a href="https://www.facebook.com/sunil.kumar.682"><core-tooltip label="Facebook"><core-icon icon="social:post-facebook"></core-icon></core-tooltip></a>
     </div>
-
   </core-header-panel>
   <span tool>Sunil Kumar C</span>
   
@@ -66,7 +66,9 @@ I am a Computer Science graduate from PES Institute Of Technology, Bangalore. I 
       
       </core-animated-pages>
     </div>
+
 </core-scaffold>
+
 <template is="auto-binding" id="t">
 <script src="/javascripts/app.js"></script>
 </body>
