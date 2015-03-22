@@ -158,32 +158,32 @@ core-animated-pages > * {
   background-color: #f7f7f7;
 }
 
-#hero1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    background-color: orange;
-  }
-  #hero2 {
-    position: absolute;
-    top: 200px;
-    left: 300px;
-    width: 300px;
-    height: 300px;
-    background-color: orange;
-  }
-  #bottom1, #bottom2 {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    height: 50px;
-  }
-  #bottom1 {
-    background-color: blue;
-  }
-  #bottom2 {
-    background-color: green;
-  }
+.toolbar {
+      background-color: steelblue;
+      height: 100px;
+    }
+
+    #container {
+      overflow: hidden;
+    }
+
+    #noscroll {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .card {
+      position: relative;
+      height: 150px;
+      width: 150px;
+      font-size: 50px;
+      margin: 8px;
+      background-color: tomato;
+      border-radius: 4px;
+      cursor: default;
+    }
+
+    .view {
+      font-size: 250px;
+      background-color: tomato;
+    }
