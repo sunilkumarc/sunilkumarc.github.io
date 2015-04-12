@@ -83,8 +83,6 @@ core-animated-pages {
   width: 100%;
   height: 100%;
   -webkit-user-select: none;
-  overflow: overflow;
-  /*border: 2px solid;*/
 }
 
 core-animated-pages > * {
@@ -105,7 +103,7 @@ core-animated-pages > * {
 #aboutme_pic img {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   background-color: #fff;
 }
 
@@ -114,7 +112,7 @@ core-animated-pages > * {
 }
 
 #aboutme_desc p {
-  background-color: #f7f7f7;
+  /*background-color: #f7f7f7;*/
   margin: 0;
   margin: 0 0 0 5%;
   padding-left: 1%;
@@ -123,39 +121,13 @@ core-animated-pages > * {
   padding-top: 0;
 }
 
-@media all and (max-width: 480px) {
-  core-animated-pages {
-    width: 95%;
-    height: 95%;
-    -webkit-user-select: none;
-    overflow: overflow;
-  }
-
-  #aboutme_pic {
-
-    width: 100%;
-    height: 200px;
-    margin: 0 0 5% 0;
-  }
-
-  #aboutme_desc {
-    width: 100%;
-    margin: 0 0 1% 0;
-  }
-
-  #aboutme_desc p {
-    font-size: 1em;
-    margin: 0;
-  }
-}
-
 #home {
   
   overflow: overflow;
 }
 
 #pages section {
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 .toolbar {
@@ -187,3 +159,113 @@ core-animated-pages > * {
       font-size: 250px;
       background-color: tomato;
     }
+
+    .blog-date {
+      color: #9E9E9E;
+      font-size: 1em;
+      font-weight: bold;
+      text-align: right;
+    }
+
+#quizup-download-link {
+  margin: 0;
+}
+
+.blog {
+  width: 100%;
+  min-height: 700px;
+  height: auto;
+  background-color: #fff;
+}
+
+.blog .content {
+  padding: 2%;
+}
+
+.blog .content .header {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.blog .content div {
+  font-size: 1.3em;
+  margin-top: 1%;
+  line-height: 1.5em;
+}
+
+.blog .content .blog-date {
+  font-size: 1em;
+  text-align: left;
+  font-weight: normal;
+} 
+
+.blog .content img {
+  width: 25%;
+  height: 20%;
+  margin-left: 33%;
+  margin-top: 2%;
+}
+
+.blog .content .blog-back {
+  font-size: 1.8em;
+  text-decoration: underline;
+  margin-left: 42%;
+  font-weight: bold;
+  color: #433e90;
+}
+
+.blog-page-header {
+  background-color: #fff;
+  font-size: 1.8em;
+  height: auto;
+  border-bottom: 1px solid #9E9E9E;
+  font-weight: bold;
+  padding: 2% 3% 2% 2%;
+  color: #757575;
+}
+
+@media all and (max-width: 480px) {
+  core-animated-pages {
+    width: 95%;
+    height: 95%;
+    -webkit-user-select: none;
+    overflow: overflow;
+  }
+
+  #aboutme_pic {
+
+    width: 100%;
+    height: 200px;
+    margin: 0 0 5% 0;
+  }
+
+  #aboutme_desc {
+    width: 100%;
+    margin: 0 0 1% 0;
+  }
+
+  #aboutme_desc p {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  .blog .content .header {
+    font-size: 1.6em;
+  }
+
+  .blog .content div {
+    font-size: 1.1em;
+    padding: 0% 2% 0% 2%;  
+  }
+
+  .blog .content img {
+    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .blog-page-header {
+    color: #757575;
+    padding: 4% 3% 4% 3%;
+  }
+}
