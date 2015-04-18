@@ -258,10 +258,12 @@ core-animated-pages > * {
 
   .blog .content .header {
     font-size: 1.6em;
+    line-height: 1.2em;
   }
 
   .blog .content div {
-    font-size: 1.1em;
+    font-size: 1em;
+    line-height: 1.5em;
     padding: 0% 2% 0% 2%;  
   }
 
@@ -274,5 +276,9 @@ core-animated-pages > * {
   .blog-page-header {
     color: #757575;
     padding: 4% 3% 4% 3%;
+  }
+
+  .blog .content .blog-date {
+    padding-bottom: 8px;
   }
 }
