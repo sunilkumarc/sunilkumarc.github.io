@@ -1,0 +1,145 @@
+<!--
+	@license
+	Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+	This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+	The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+	The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+	Code distributed by Google as part of the polymer project is also
+	subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+A Polymer Component for sharing a URL on Facebook.
+
+The Share button lets people add a personalized message to links before sharing on their timeline, in groups, or to their friends via a Facebook Message.
+
+__For the official Facebook documentation, please visit this [link](https://developers.facebook.com/docs/plugins/share-button/).__
+
+
+******
+
+### Default Example
+
+	<facebook-share></facebook-share>
+
+### Full Example
+
+	<facebook-share
+		type="html5"
+		appid="266086456917866"
+		pageurl="https://developers.facebook.com/docs/plugins/"
+		layout="icon_link">
+	</facebook-share>
+
+@element facebook-share
+@blurb A Polymer Component for sharing a URL on Facebook.
+@homepage http://kunalnagar.github.io/facebook-share
+
+******
+
+-->
+<polymer-element name="facebook-share" attributes="type appid pageurl layout">
+    <template>
+        <!-- HTML5 -->
+        <div id="fbsharehtml5">
+            <div class="fb-share-button" data-href="{{ pageurl }}" data-layout="{{ layout }}"></div>
+        </div>
+        <!-- XFBML -->
+        <div id="fbsharexfbml">
+            <fb:share-button href="{{ pageurl }}" layout="{{ layout }}"></fb:share-button>
+        </div>
+        <!-- IFRAME -->
+        <div id="fbshareiframe">
+            <iframe src="//www.facebook.com/plugins/share_button.php?href={{ pageurl }}&amp;
+        		layout={{ layout }}" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+        </div>
+    </template>
+    <script>
+    Polymer({
+        /**
+         * Type of Facebook Share Button
+         *
+         * Values: `html5` | `xfbml` | `iframe`
+         *
+         * @attribute type
+         * @type string
+         * @default html5
+         */
+        type: 'html5',
+
+        /**
+         * Facebook APP ID
+         *
+         * @attribute appid
+         * @type string
+         */
+        appid: '266086456917866',
+
+        /**
+         * The absolute URL of the page that will be shared.
+         *
+         * @attribute pageurl
+         * @type string
+         */
+        pageurl: 'https://sunilkumarc.in/',
+
+        /**
+         * Selects one of the different layouts that are available for the plugin.
+         *
+         * Values: `box_count` | `button_count` | `button` | `link` | `icon_link` | `icon`
+         *
+         * @attribute layout
+         * @type string
+         * @default icon_link
+         */
+        layout: 'icon_link',
+
+        renderFacebookShare: function() {
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            switch (this.type) {
+                case 'html5':
+                    console.log('html5');
+                    var container = this.$.fbsharehtml5,
+                        that = this;
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                            appId: that.appid,
+                            xfbml: true,
+                            version: 'v2.1'
+                        });
+                        FB.XFBML.parse(container);
+                    }
+                    break;
+                case 'xfbml':
+                    console.log('xfbml');
+                    var container = this.$.fbsharexfbml,
+                        that = this;
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                            appId: that.appid,
+                            xfbml: true,
+                            version: 'v2.1'
+                        });
+                        FB.XFBML.parse(container);
+                    }
+                    break;
+                case 'iframe':
+                    this.$.fbshareiframe.style.display = 'block';
+                    break;
+            }
+        },
+        ready: function() {
+            this.$.fbshareiframe.style.display = 'none';
+            this.async(this.renderFacebookShare, null, 1000);
+        }
+    });
+    </script>
+</polymer-element>
